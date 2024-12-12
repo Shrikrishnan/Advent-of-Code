@@ -53,9 +53,9 @@ public class Day1Part2HistorianHysteria {
 
     public static Integer calculateTheSimilaritySCoreUsingMapAndRightList(HashMap<Integer, Integer> similarityScoreMap, List<Integer> rightList) {
         int similarityScore = 0;
-        for (int i = 0; i < rightList.size(); i++) {
-            if (similarityScoreMap.containsKey(rightList.get(i))) {
-                similarityScore = (similarityScoreMap.get(rightList.get(i)) * rightList.get(i)) + similarityScore;
+        for (Integer integer : rightList) {
+            if (similarityScoreMap.containsKey(integer)) {
+                similarityScore = (similarityScoreMap.get(integer) * integer) + similarityScore;
             }
         }
         return similarityScore;
